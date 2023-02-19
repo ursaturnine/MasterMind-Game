@@ -1,7 +1,9 @@
 import copy
-import constant
-from randomGenerator import  generateNumber
-from chatBot import ChatBot
+import src.constant as constant
+from src.randomGenerator import  generateNumber
+from src.chatBot import ChatBot
+
+
 
 
 # validate user input
@@ -28,10 +30,6 @@ def getandValidateInput():
         
 
 
-
-# options menu for game - to do
-def options():
-    pass
 
 
 # marshall answer string to dictionary format
@@ -165,7 +163,9 @@ def matchLocs(guess,  word):
     return correctPlacement
 
 
-masterMind()
+# masterMind()
+
+
 
 
 
