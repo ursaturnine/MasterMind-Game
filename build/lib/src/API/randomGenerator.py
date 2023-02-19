@@ -1,4 +1,4 @@
-import constant 
+import constant
 import requests
 
 def generateNumber():
