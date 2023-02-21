@@ -1,5 +1,6 @@
 from randomGenerator import generateNumber
 
+
 class Computer:
 
     def __init__(self):

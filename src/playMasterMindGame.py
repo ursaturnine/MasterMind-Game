@@ -1,16 +1,27 @@
+import click
 import constant
 from MasterMind import MasterMind
 from Computer import Computer
+from ProgressBar import progressBar as ProgressBar
 
-# game play
+
+@click.command()
 def playMasterMind():
+
+
     computer = Computer()
     computer.getRandomNumber()
     answer = computer.ansToDict()
     randomNumber = computer.randomNumber
+    ProgressBar(randomNumber)
+
+
 
     mastermind = MasterMind()
+    mastermind.isActive = True
 
+    print("Shhh.. the secret number is")
+    print(randomNumber)
 
     # start of game - welcome message
     mastermind.helperBot.welcome()
@@ -54,13 +65,14 @@ def playMasterMind():
 
     if mastermind.isMasterMind:
         mastermind.helperBot.won()
+        mastermind.isActive = False
         return
     else:
         mastermind.helperBot.end_game()
+        mastermind.isActive = False
         return
 
 
-playMasterMind()
 
 
 

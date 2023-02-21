@@ -10,7 +10,7 @@ setup(
     install_requires=["click"],
     entry_points={
         'console_scripts': [
-            'mastermind = src.optionsMenu:options'
+            'mastermind = src.optionsMenu:menu'
         ]
     }
 )

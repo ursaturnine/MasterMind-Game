@@ -9,6 +9,7 @@ class MasterMind:
         self.viewed = []
         self.isMasterMind = False
         self.helperBot = ChatBot()
+        self.isActive = False
     
 
     def matchNums(self, guess, word):
