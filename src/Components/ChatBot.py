@@ -42,9 +42,9 @@ class ChatBot:
 
 
 
-        print(Fore.WHITE + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
+        print(Fore.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
 
-        return (Fore.WHITE  + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
+        return (Fore.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
 
 
     def guess_again(self):
