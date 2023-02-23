@@ -21,8 +21,8 @@ Structure (back-end focused):
 
 
 Packages:
--click for command line interfaces
--requests to make an API request
+- click for command line interfaces
+- requests to make an API request
 
 Set-Up:
 
