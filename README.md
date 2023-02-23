@@ -28,34 +28,21 @@ Set-Up:
 
 1. Git clone this repository
 2. Cd into the directory you've saved the game
-  2a. Create a virtual environment to install required packages
-      - python3 -m venv venv
-  2b. Activate the virtual environment
+3. Activate the virtual environment
       - source venv/bin/activate
 3. Install package and requirements
-   3a. Requirements
-       - pip install -r requirements.txt
-   3b. Package
+   - 3b. Package
        - pip install .
+   - 3a. Requirements
+       - pip install -r requirements.txt
+  
 4. Enter 'game' in your CLI to start the game! (or run src/optionsMenu.py to run the game as a module instead of a CLI program)
 
 
 Tests:
-   - Make sure you have pytest installed in your virtual environment to run the unittests.
  1. Run pytest to ensure all unittests are passing
+    - [DEBUG] Make sure you have pytest installed in your virtual environment to run the unittests.
 
-
-
-Debug:
-
-1. Make sure you have all requirements. Depending on your directory set up, The setup file may miss an install. 
-   - requests, copy, click, pytest, time
-   
-2. Make sure you have the environment variable set; Depending on your directory set up, the packages may not know how to communicate.
-   2a. macOS
-       - export PYTHONPATH="/<path>/<to>/<your>/<directory>/<for>/<mastermindgame>:$PYTHONPATH
-   2b. Make sure the path was set (macOS)
-       - echo $PYTHONPATH
        
        
    
