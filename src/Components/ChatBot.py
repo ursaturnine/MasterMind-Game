@@ -1,6 +1,12 @@
 """Chat bot will dispatch helpful communication to the player
 """
 
+import colorama
+from colorama import Fore, Back, Style
+
+# initialize colorama
+colorama.init(autoreset=True)
+
 class ChatBot:
 
     def __init__(self):
@@ -17,7 +23,7 @@ class ChatBot:
 
     # Welcome Messsage
     def welcome(self):
-        print(self.welcome_message)
+        print(Fore.LIGHTGREEN_EX + Back.GREEN + self.welcome_message)
         
         return
     
@@ -36,9 +42,9 @@ class ChatBot:
 
 
 
-        print(self.summary.format(num = correctNums, loc = correctLocs))
- 
-        return self.summary.format(num = correctNums, loc = correctLocs)
+        print(Fore.LIGHTCYAN_EX + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
+
+        return (Fore.LIGHTCYAN_EX + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
 
 
     def guess_again(self):
@@ -67,7 +73,6 @@ class ChatBot:
     def end_game(self, randomNumber):
         
         print(self.game_over.format(num=randomNumber))
-        
         return 
     
     def remaining_tries(self, numTries):
@@ -77,8 +82,8 @@ class ChatBot:
     
 
     def helpful_hint(self, ind, suffix, word):
-        print("Your Hint is...")
-        print(self.hint.format(pos = ind, suff = suffix, adj = word))
+        print(Fore.MAGENTA + Back.BLUE + "Your Hint is...")
+        print(Fore.LIGHTMAGENTA_EX + Back.BLUE + self.hint.format(pos = ind, suff = suffix, adj = word))
         return
 
 

@@ -1,11 +1,14 @@
-import click
+import colorama
+from colorama import Fore, Back, Style
 import constant
 from src.Components.MasterMind import MasterMind
 from src.Components.Computer import Computer
 from src.Components.ProgressBar import progressBar as ProgressBar
 
 
-@click.command()
+# initialize colorama
+colorama.init()
+
 def playMasterMind():
 
 
@@ -29,12 +32,12 @@ def playMasterMind():
     while tries > 0 and mastermind.isMasterMind is False:
     
         if tries < 10:
-            view = input("Would you like to view your history? Select 'y' or any key for 'No'...")
+            view = input(Fore.YELLOW + "Would you like to view your history? Select 'y' or any key for 'No'...")
             if view in constant.USER_YES:
                 mastermind.viewHistory()
         
         if tries < 6:
-            viewHint = input("Would you like a hint? Select 'y' or any key for 'No'...")
+            viewHint = input(Fore.YELLOW + "Would you like a hint? Select 'y' or any key for 'No'...")
             if viewHint in constant.USER_YES:
                 mastermind.giveHint(answer)
 
@@ -69,10 +72,6 @@ def playMasterMind():
     else:
         mastermind.helperBot.end_game(computer.randomNumber)
         return
-
-
-
-
 
 
 

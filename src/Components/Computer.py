@@ -1,5 +1,9 @@
 from src.API.randomGenerator import generateNumber
+import colorama
+from colorama import Fore, Back, Style
 
+# initialize colorama
+colorama.init(autoreset=True)
 
 class Computer:
 
@@ -11,19 +15,19 @@ class Computer:
     def getandValidateInput(self):
 
         while not self.validInput:
-            guess = input("Guess a number...\n")
+            guess = input(Fore.LIGHTGREEN_EX + "Guess a number...\n")
 
             if guess.isdigit() == False:
-                print("Please enter only positive numbers!")
+                print(Fore.RED + "Please enter only positive numbers!")
                 continue
             elif len(guess) > 4:
-                print("Your Input must only be 4 digits!")
+                print(Fore.RED + "Your Input must only be 4 digits!")
                 continue
             elif len(guess) < 4:
-                print("Your guess must be four digits")
+                print(Fore.RED + "Your guess must be four digits")
                 continue
             elif guess is False:
-                print("Invalid input. Please make sure your guess is a 4 digit number.")
+                print(Fore.RED + "Invalid input. Please make sure your guess is a 4 digit number.")
                 continue
             else:
                 self.validInput = True
