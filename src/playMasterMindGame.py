@@ -1,8 +1,8 @@
 import click
 import constant
-from MasterMind import MasterMind
-from Computer import Computer
-from ProgressBar import progressBar as ProgressBar
+from src.Components.MasterMind import MasterMind
+from src.Components.Computer import Computer
+from src.Components.ProgressBar import progressBar as ProgressBar
 
 
 @click.command()
@@ -16,12 +16,7 @@ def playMasterMind():
     ProgressBar(randomNumber)
 
 
-
     mastermind = MasterMind()
-    mastermind.isActive = True
-
-    print("Shhh.. the secret number is")
-    print(randomNumber)
 
     # start of game - welcome message
     mastermind.helperBot.welcome()
@@ -34,9 +29,14 @@ def playMasterMind():
     while tries > 0 and mastermind.isMasterMind is False:
     
         if tries < 10:
-            view = input("Would you like to view your history? (Y or N)")
+            view = input("Would you like to view your history? Select 'y' or any key for 'No'...")
             if view in constant.USER_YES:
                 mastermind.viewHistory()
+        
+        if tries < 6:
+            viewHint = input("Would you like a hint? Select 'y' or any key for 'No'...")
+            if viewHint in constant.USER_YES:
+                mastermind.giveHint(answer)
 
         
         computer.validInput = False
@@ -65,14 +65,12 @@ def playMasterMind():
 
     if mastermind.isMasterMind:
         mastermind.helperBot.won()
-        mastermind.isActive = False
         return
     else:
-        mastermind.helperBot.end_game()
-        mastermind.isActive = False
+        mastermind.helperBot.end_game(computer.randomNumber)
         return
 
-
+playMasterMind()
 
 
 

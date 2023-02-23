@@ -1,4 +1,4 @@
-from randomGenerator import generateNumber
+from src.API.randomGenerator import generateNumber
 
 
 class Computer:
@@ -41,9 +41,30 @@ class Computer:
         
         answerDict = {}
         for pos, num in enumerate(self.randomNumber):
-            if num in answerDict:
-                answerDict[num][1] += 1
+            if num in answerDict and self.randomNumber.count(num) > 1:
+                count = self.randomNumber.count(num)
+                posVal = self.calcMultiplePos(num, count, self.randomNumber)
+                answerDict[num] = [(posVal), count ]
             else:
-                answerDict[num] = [pos, 1]
-        
+                answerDict[num] = [(pos,), 1]
+
+
         return answerDict
+
+    def calcMultiplePos(self, num, count, randomNumber):
+        allPos = []
+        i = count
+        while i:
+            for pos, ele in enumerate(randomNumber):
+                if ele == num:
+                    allPos.append(pos)
+                    i -= 1
+
+        
+        return tuple(allPos)
+
+
+
+
+
+        

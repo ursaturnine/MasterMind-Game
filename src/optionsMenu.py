@@ -3,11 +3,11 @@
 
 from the src directory, run python optionsMenu.py --help to view console help menu
 """
+
 import click
 import constant
 from playMasterMindGame import playMasterMind
 import time
-
 
 
 @click.command()
@@ -24,8 +24,4 @@ def menu(instructions):
         time.sleep(3)
         click.launch('https://github.com/ursaturnine/MasterMind-Game')
 
-
-if __name__ == "__main__":
-    menu()
-# menu()
-    
+menu()

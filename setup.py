@@ -4,13 +4,17 @@ from setuptools import setup, find_packages
 
 setup(
     name="Master-Mind-Game",
-    version="1.0",
-    packages=find_packages(),
+    version="1.0.0",
+    description="MasterMindGame using Click for an interactive CLI GUI",
+    author="Tyrah Gullette",
+    author_email="tyrah96@gmail.com",
+    url="https://github.com/ursaturnine/MasterMind-Game",
+    packages=find_packages(exclude=["tests*", "testing*"]),
     install_package_data=True,
-    install_requires=["click"],
+    install_requires=["click", "requests", "copy", "pytest", "random"],
     entry_points={
         'console_scripts': [
-            'mastermind = src.optionsMenu:menu'
+            'game = src.optionsMenu:menu'
         ]
     }
 )

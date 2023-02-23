@@ -10,15 +10,13 @@ class ChatBot:
         self.another_guess = "Guess again..."
         self.guess_history_helper = "Your previous guesses are:\n"
         self.mastermind = "You guessed it! You're a MasterMind!"
-        self.game_over = "Game Over!"
+        self.game_over = "The correct number was {num}! Game Over!"
         self.tries_remaining = "You have {tries} guesses remaining"
+        self.hint = "The {pos}{suff} number rhymes with {adj}"
 
 
     # Welcome Messsage
     def welcome(self):
-
-
-
         print(self.welcome_message)
         
         return
@@ -66,18 +64,23 @@ class ChatBot:
         print(self.mastermind)
         return
     
-    def end_game(self):
-    
-        print(self.game_over)
+    def end_game(self, randomNumber):
+        
+        print(self.game_over.format(num=randomNumber))
         
         return 
     
     def remaining_tries(self, numTries):
 
         print(self.tries_remaining.format(tries = numTries))
-
-
         return
+    
+
+    def helpful_hint(self, ind, suffix, word):
+        print("Your Hint is...")
+        print(self.hint.format(pos = ind, suff = suffix, adj = word))
+        return
+
 
 
 
