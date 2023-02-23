@@ -23,7 +23,7 @@ class ChatBot:
 
     # Welcome Messsage
     def welcome(self):
-        print(Fore.LIGHTGREEN_EX + Back.GREEN + self.welcome_message)
+        print(Fore.LIGHTBLUE_EX + self.welcome_message)
         
         return
     
@@ -42,9 +42,9 @@ class ChatBot:
 
 
 
-        print(Fore.LIGHTCYAN_EX + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
+        print(Fore.WHITE + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
 
-        return (Fore.LIGHTCYAN_EX + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
+        return (Fore.WHITE  + Back.CYAN + self.summary.format(num = correctNums, loc = correctLocs))
 
 
     def guess_again(self):
@@ -83,7 +83,7 @@ class ChatBot:
 
     def helpful_hint(self, ind, suffix, word):
         print(Fore.MAGENTA + Back.BLUE + "Your Hint is...")
-        print(Fore.LIGHTMAGENTA_EX + Back.BLUE + self.hint.format(pos = ind, suff = suffix, adj = word))
+        print(Fore.BLUE + self.hint.format(pos = ind, suff = suffix, adj = word))
         return
 
 
