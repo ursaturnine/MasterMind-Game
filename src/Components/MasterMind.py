@@ -57,17 +57,9 @@ class MasterMind:
         # random # from 1 - 4 - both ends inclusive
         indPos = randint(0, 3)
         findAdj = randint(1, 10)
-
-        print("indPos is..")
-        print(indPos)
-        print("findadj is...")
-        print(findAdj)
-
         # set pos
         pos = indPos + 1
 
-        print("Pos is..")
-        print(pos)
 
         # find number in answer to rhyme with
         for key, values in answerDict.items():
@@ -79,18 +71,12 @@ class MasterMind:
         # set suff
                 for num, values in HINTS_DICT.items():
                     if pos == num:
-                        print("suff is...")
-                        print( HINTS_DICT[num][1][0])
                         suff = HINTS_DICT[num][1][0]
         # set adj
         for key, values in HINTS_DICT.items():
             if end_num == key:
-                print("end_num and key is...")
-                print(end_num, key)
                 for ind, word in enumerate(values[0]):
                     if ind == findAdj:
-                        print("ind and findadj is...")
-                        print(ind, findAdj)
                         adj = word
                         self.helperBot.helpful_hint(pos, suff, adj)
 
