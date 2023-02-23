@@ -11,12 +11,12 @@ Features:
 - A helpful progress bar, created with the Python 'click' package, initiates game play ([STRETCH GOAL] - this was an extension to explore the Python 'click' package further and to provide helpful feedback)
 
 Structure (back-end focused):
-Modular - I separated functions, classes, and constants into separate packages or modules for readability and maintainability
-Tested  - I wrote some unittests to ensure the code will work as expected and to catch bugs in main functionality of the program
-CLI     - I used the Python 'click' package to style the command-line to be able to run this truly as a game w/o too much time spent on frontend functionality
-Requirements - I added a requirements.txt for easy setup for anyone to run the game
-Setup.py   - I added a setup.py so the program can be installed as a package 
-Versioning - I tried to follow best coding practices by version bumping (major.minor.patch); 
+- Modular - I separated functions, classes, and constants into separate packages or modules for readability and maintainability
+- Tested  - I wrote some unittests to ensure the code will work as expected and to catch bugs in main functionality of the program
+- CLI     - I used the Python 'click' package to style the command-line to be able to run this truly as a game w/o too much time spent on frontend functionality
+- Requirements - I added a requirements.txt for easy setup for anyone to run the game
+- Setup.py   - I added a setup.py so the program can be installed as a package 
+- Versioning - I tried to follow best coding practices by version bumping (major.minor.patch); 
 
 
 
