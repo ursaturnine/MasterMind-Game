@@ -3,6 +3,12 @@ from src.Components.ChatBot import ChatBot
 from src.constant import HINTS_DICT
 from random import randint
 
+import colorama
+from colorama import Fore, Back, Style
+
+# initialize colorama
+colorama.init(autoreset=True)
+
 
 class MasterMind:
 

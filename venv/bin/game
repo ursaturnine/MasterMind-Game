@@ -1,10 +1,10 @@
 #!/Users/tyrahgullette/interview-prep/TakeHomes/MasterMindGame/venv/bin/python3
-# EASY-INSTALL-ENTRY-SCRIPT: 'Master-Mind-Game==1.1.2','console_scripts','game'
+# EASY-INSTALL-ENTRY-SCRIPT: 'Master-Mind-Game==1.2.2','console_scripts','game'
 import re
 import sys
 
 # for compatibility with easy_install; see #2198
-__requires__ = 'Master-Mind-Game==1.1.2'
+__requires__ = 'Master-Mind-Game==1.2.2'
 
 try:
     from importlib.metadata import distribution
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('Master-Mind-Game==1.1.2', 'console_scripts', 'game')())
+    sys.exit(load_entry_point('Master-Mind-Game==1.2.2', 'console_scripts', 'game')())
