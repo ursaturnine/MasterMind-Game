@@ -9,7 +9,7 @@ setup(
     author="Tyrah Gullette",
     author_email="tyrah96@gmail.com",
     url="https://github.com/ursaturnine/MasterMind-Game",
-    packages=find_packages(),
+    packages=find_packages(include=['src*']),
     install_package_data=True,
     entry_points={
         'console_scripts': [
