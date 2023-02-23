@@ -21,8 +21,9 @@ Structure (back-end focused):
 
 
 Packages:
-- click for command line interfaces
+- click to provide a command line interface for the optionsMenu module
 - requests to make an API request
+- colorama for coloring prompts and output
 
 Set-Up:
 
