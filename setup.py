@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="Master-Mind-Game",
-    version="1.0.0",
+    version="1.1.0",
     description="MasterMindGame using Click for an interactive CLI GUI",
     author="Tyrah Gullette",
     author_email="tyrah96@gmail.com",
